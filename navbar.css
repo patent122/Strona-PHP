@@ -1,0 +1,36 @@
+body {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.custom-navbar {
+  background-color: #343a40; /* Ciemny kolor tła */
+  border-bottom: 3px solid #ffbf00; /* Akcent kolorystyczny */
+}
+
+.navbar-brand {
+  color: #ffbf00 !important; /* Zmiana koloru marki/tytułu */
+  font-weight: bold; /* Pogrubienie tekstu */
+}
+
+.nav-link {
+  color: #f8f9fa !important; /* Jasny kolor tekstu linków */
+  transition: color 0.3s ease; /* Animacja przejścia dla koloru tekstu */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #ffbf00 !important; /* Kolor tekstu przy najechaniu/aktywacji */
+  background-color: transparent; /* Tło przy najechaniu/aktywacji */
+}
+
+.navbar-toggler {
+  border-color: #ffbf00; /* Kolor obramowania przycisku rozwijania dla urządzeń mobilnych */
+}
+
+.navbar-toggler-icon {
+  background-image: url("ścieżka_do_ikonki_menu"); /* Opcjonalnie: niestandardowa ikona dla przycisku rozwijania */
+}

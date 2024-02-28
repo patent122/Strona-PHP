@@ -1,0 +1,19 @@
+role:
+admin, uczen, instruktor
+
+uczen:
+kupowanie pakietu
+podglad samochodów
+egzaminy
+
+administrator
+dodaje usuwa samochody
+dodaje usuwa instruktorów
+dodaje usuwa pakiety
+dodaje usuwa konta
+
+instruktor:
+pogdląd lekcji
+planowanie lekcji
+dodaje ucznia
+
