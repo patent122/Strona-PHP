@@ -18,7 +18,9 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
     
-	<link href="bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
 
     <style>
       .bd-placeholder-img {
@@ -74,85 +76,7 @@
 </main>
  <script src="bootstrap.bundle.min.js"></script>
 
-<footer class="text-center text-lg-start bg-light text-muted">
-  <section class="d-flex justify-content-center p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Dołącz do nas w mediach społecznościowych:</span>
-    </div>
-    <!-- Left -->
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <div class="row mt-3">
-        <!-- Section: Informacje -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Nauka Jazdy
-          </h6>
-          <p>
-            Od 10 lat uczymy jeździć.
-          </p>
-        </div>
-        <!-- Section: Informacje -->
-
-        <!-- Section: Kontakt -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            Kontakt
-          </h6>
-          <p><i class="fas fa-home me-3"></i> Warszawa, ul. Zdawalnicza 12</p>
-          <p><i class="fas fa-envelope me-3"></i> info@naukajazdy.com</p>
-          <p><i class="fas fa-phone me-3"></i> + 48 123 456 789</p>
-          <p><i class="fas fa-print me-3"></i> + 48 987 654 321</p>
-        </div>
-        <!-- Section: Kontakt -->
-
-        <!-- Section: Linki -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            Przydatne linki
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Cennik</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Harmonogram zajęć</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Regulamin</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Polityka prywatności</a>
-          </p>
-        </div>
-        <!-- Section: Linki -->
-      </div>
-    </div>
-  </section>
-
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2024 Nauka Jazdy. Wszelkie prawa zastrzeżone.
-  </div>
-</footer>
+  <?php displayFooter(); ?>
 
   <script src="bootstrap.bundle.min.js"></script>
 

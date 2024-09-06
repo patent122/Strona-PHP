@@ -51,128 +51,93 @@ function wybranaRola($rolaZBazy, $rolaWOpcji)
 	}
 }
 
-function menu()
-{
-	?>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">Nauka jazdy</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-	
-	
-
-	
-      <div class="collapse navbar-collapse" id="navbarsExample04">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-		<?php if(jestRola('administrator')) { ?> 
-		<li class="nav-item">
-            <a class="nav-link" aria-current="page" href="samochody.php">Samochody</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="uzytkownicy.php">Uzytkownicy</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="pakiety.php">Pakiety</a>
-          </li>
-			<?php } else if(jestRola('instruktor')) { ?> 
-			<li class="nav-item">
-				<a class="nav-link" aria-current="page" href="uzytkownicy.php">Uczniowie</a>
-			</li>
-			<?php } else if(jestRola('uczen')) { ?> 
-		 
-           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="zakupionePakiety.php">Zakupione pakiety</a>
-          </li>
-		  <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="egzaminy.php">Egzaminy</a>
-          </li>
-		  <?php }  
-				if(zalogowany()) { ?> 
-			<li class="nav-item">
-            <a class="nav-link" href="panelUzytkownika.php">Panel użytkownika</a>
-          </li>
-			<?php }  ?>
-		  <li class="nav-item">
-            <a class="nav-link" href="logowanie.php">Logowanie</a>
-          </li>
-		  
-		  
-		  
-        </ul>
-      </div>
-	  
-
-	  
-    </div>
-  </nav>
-<?php
+function menu() {
+    ?>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="index.php">Nauka Jazdy</a>
+            <ul class="navbar-menu">
+                <!-- Administrator -->
+                <?php if(jestRola('administrator')) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="samochody.php">Samochody</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="uzytkownicy.php">Użytkownicy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pakiety.php">Pakiety</a>
+                </li>
+                
+                <!-- Instruktor -->
+                <?php } else if(jestRola('instruktor')) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="uzytkownicy.php">Uczniowie</a>
+                </li>
+                
+                <!-- Uczeń -->
+                <?php } else if(jestRola('uczen')) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="zakupionePakiety.php">Zakupione Pakiety</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="egzaminy.php">Egzaminy</a>
+                </li>
+                <?php } ?>
+                
+                <!-- Panel użytkownika i logowanie -->
+                <?php if(zalogowany()) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="panelUzytkownika.php">Panel użytkownika</a>
+                </li>
+                <?php } ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="logowanie.php">Logowanie</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <?php
 }
+
 
 function displayFooter() {
     echo '
-    <script src="bootstrap.bundle.min.js"></script>
-
-    <footer class="text-center text-lg-start bg-light text-muted">
-      <section class="d-flex justify-content-center p-4 border-bottom">
-        <div class="me-5 d-none d-lg-block">
+    <footer>
+      <section>
+        <div class="social-icons">
           <span>Dołącz do nas w mediach społecznościowych:</span>
-        </div>
-
-        <div>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="me-4 text-reset">
-            <i class="fab fa-instagram"></i>
-          </a>
+          <a href="https://www.facebook.com/twoja-strona" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.twitter.com/twoja-strona" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+          <a href="https://www.instagram.com/twoja-strona" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </section>
 
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>Nauka Jazdy
-              </h6>
-              <p>Od 10 lat uczymy jeździć.</p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
-              <p><i class="fas fa-home me-3"></i> Warszawa, ul. Zdawalnicza 12</p>
-              <p><i class="fas fa-envelope me-3"></i> info@naukajazdy.com</p>
-              <p><i class="fas fa-phone me-3"></i> + 48 123 456 789</p>
-              <p><i class="fas fa-print me-3"></i> + 48 987 654 321</p>
-            </div>
-
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">Przydatne linki</h6>
-              <p><a href="#!" class="text-reset">Cennik</a></p>
-              <p><a href="#!" class="text-reset">Harmonogram zajęć</a></p>
-              <p><a href="#!" class="text-reset">Regulamin</a></p>
-              <p><a href="#!" class="text-reset">Polityka prywatności</a></p>
-            </div>
-          </div>
+      <section>
+        <div class="contact-info">
+          <h6>Nauka Jazdy</h6>
+          <p>Od 10 lat uczymy jeździć.</p>
+        </div>
+        <div class="contact-info">
+          <h6>Kontakt</h6>
+          <p><i class="fas fa-home"></i> Warszawa, ul. Zdawalnicza 12</p>
+          <p><i class="fas fa-envelope"></i> info@naukajazdy.com</p>
+          <p><i class="fas fa-phone"></i> +48 123 456 789</p>
+          <p><i class="fas fa-print"></i> +48 987 654 321</p>
+        </div>
+        <div class="links">
+          <h6>Przydatne linki</h6>
+          <p><a href="#!" class="text-reset">Cennik</a></p>
+          <p><a href="#!" class="text-reset">Harmonogram zajęć</a></p>
+          <p><a href="#!" class="text-reset">Regulamin</a></p>
+          <p><a href="#!" class="text-reset">Polityka prywatności</a></p>
         </div>
       </section>
 
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <div class="bottom">
         © 2024 Nauka Jazdy. Wszelkie prawa zastrzeżone.
       </div>
-    </footer>
-
-    <script src="bootstrap.bundle.min.js"></script>
-    ';
+    </footer>';
 }
-?>
-
 
