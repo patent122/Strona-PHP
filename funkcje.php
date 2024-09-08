@@ -130,7 +130,7 @@ function displayFooter() {
           <h6>Przydatne linki</h6>
           <p><a href="#!" class="text-reset">Cennik</a></p>
           <p><a href="#!" class="text-reset">Harmonogram zajęć</a></p>
-          <p><a href="#!" class="text-reset">Regulamin</a></p>
+          <p><a href="regulamin.php" class="text-reset">Regulamin</a></p>
           <p><a href="#!" class="text-reset">Polityka prywatności</a></p>
         </div>
       </section>

@@ -3,8 +3,6 @@
 	require("funkcje.php");
 ?>
 
-
-
 <!doctype html>
 <html lang="pl">
   <head>
@@ -15,9 +13,6 @@
     <title>Nauka jazdy</title>
 	
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
-    
 	<link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
@@ -38,9 +33,6 @@
       }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
   </head>
 
 <body>
@@ -97,11 +89,9 @@
 	
 	
 </main>
- <script src="bootstrap.bundle.min.js"></script>
 
   <?php displayFooter(); ?>
 
-  <script src="bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

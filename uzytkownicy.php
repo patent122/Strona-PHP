@@ -4,7 +4,6 @@
 ?>
 
 
-
 <!doctype html>
 <html lang="pl">
   <head>
@@ -14,10 +13,7 @@
     <meta name="author" content="Patryk Panek">
     <title>Nauka jazdy</title>
 	
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
-    
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"> 
 	<link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
@@ -38,9 +34,6 @@
       }
     </style>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="navbar.css" rel="stylesheet">
   </head>
 
 <body>
@@ -72,13 +65,11 @@
 
             $polaczenie = polaczZBaza();
 
-            // Sprawdzenie, czy login już istnieje
             $sql = "SELECT * FROM Uzytkownicy WHERE Login = '$login'";
             $wynik = $polaczenie->query($sql);
             if ($wynik->num_rows > 0) {
                 echo '<p style="color: red;">Taki login już istnieje w bazie danych.</p>';
             } else {
-                // Jeśli login nie istnieje, kontynuuj dodawanie użytkownika
                 $imie = $polaczenie->real_escape_string($imie);
                 $nazwisko = $polaczenie->real_escape_string($nazwisko);
                 $numerTelefonu = $polaczenie->real_escape_string($numerTelefonu);
@@ -251,11 +242,9 @@ $polaczenie->close();
 
 	
 </main>
- <script src="bootstrap.bundle.min.js"></script>
 
   <?php displayFooter(); ?>
 
-  <script src="bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

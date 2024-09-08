@@ -74,11 +74,9 @@
 	
 	
 </main>
- <script src="bootstrap.bundle.min.js"></script>
 
   <?php displayFooter(); ?>
 
-  <script src="bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

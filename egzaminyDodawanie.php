@@ -15,14 +15,9 @@
     <title>Nauka jazdy</title>
 	
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
-    
 	<link href="bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="style.css"> 
 
     <style>
       .bd-placeholder-img {
@@ -97,11 +92,9 @@
 	
 	
 </main>
- <script src="bootstrap.bundle.min.js"></script>
 
   <?php displayFooter(); ?>
 
-  <script src="bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
