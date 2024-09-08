@@ -1,65 +1,75 @@
-
-main {
-    flex: 1; 
-}
-
 footer {
-    padding: 40px 0; 
+    background-color: #2c3e50; /* Ciemne tło dla stopki */
+    padding: 40px 0; /* Większe odstępy od góry i dołu */
     text-align: center;
-    font-family: Arial, sans-serif;
-    margin-top: auto; 
-    width: 100%; 
+    color: white; /* Biały kolor tekstu */
+    margin-top: auto; /* Sprawia, że stopka zawsze jest na dole */
 }
 
 footer section {
-    padding: 20px 0; 
-    border-bottom: 1px;
+    padding: 20px 0; /* Większe odstępy między sekcjami */
+    border-bottom: 1px solid #444; /* Ciemniejsza linia oddzielająca sekcje */
 }
 
 footer .social-icons {
     display: flex;
     justify-content: center;
-    gap: 25px; 
-    margin-bottom: 20px; 
+    gap: 25px; /* Większe odstępy między ikonami */
+    margin-bottom: 20px; /* Więcej przestrzeni poniżej ikon */
 }
 
 footer .social-icons a {
-    color: #555;
+    color: white; /* Biały kolor ikon */
     text-decoration: none;
-    font-size: 1.8rem; 
+    font-size: 1.8rem; /* Większe ikony */
+    transition: color 0.3s ease; /* Łagodna zmiana koloru */
 }
 
 footer .social-icons a:hover {
-    color: #f39c12; 
+    color: #f39c12; /* Kolor ikony po najechaniu */
 }
 
 footer .contact-info, footer .links {
     text-align: left;
     display: inline-block;
-    margin: 0 20px; 
+    margin: 0 20px; /* Więcej przestrzeni między sekcjami */
     vertical-align: top;
 }
 
 footer .contact-info h6, footer .links h6 {
     font-weight: bold;
     margin-bottom: 15px;
+    color: #f39c12; /* Akcent kolorystyczny na nagłówkach */
 }
 
 footer p {
     margin: 5px 0;
+    color: #ccc; /* Jasnoszary kolor tekstu */
 }
 
 footer .bottom {
+    background-color: #1a252f; /* Ciemniejsze tło dla dolnej części */
     padding: 15px;
     font-size: 0.9rem;
     margin-top: 20px;
+    color: #ccc;
 }
 
+/* Dostosowanie szerokości sekcji */
 footer .contact-info, footer .links {
-    width: 200px; 
+    width: 200px; /* Stała szerokość dla sekcji */
 }
 
 footer .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+footer a {
+    color: white; /* Białe linki w stopce */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f39c12; /* Kolor linku po najechaniu */
 }

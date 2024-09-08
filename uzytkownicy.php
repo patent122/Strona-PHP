@@ -65,11 +65,12 @@
 
             $polaczenie = polaczZBaza();
 
-            $sql = "SELECT * FROM Uzytkownicy WHERE Login = '$login'";
-            $wynik = $polaczenie->query($sql);
-            if ($wynik->num_rows > 0) {
-                echo '<p style="color: red;">Taki login już istnieje w bazie danych.</p>';
-            } else {
+            $sql = "SELECT * FROM Uzytkownicy WHERE Login = '$login' OR NumerTelefonu = '$numerTelefonu'";
+			$wynik = $polaczenie->query($sql);
+
+			if ($wynik->num_rows > 0) {
+    			echo '<p style="color: red;">Taki login lub numer telefonu już istnieje w bazie danych.</p>';
+			} else {
                 $imie = $polaczenie->real_escape_string($imie);
                 $nazwisko = $polaczenie->real_escape_string($nazwisko);
                 $numerTelefonu = $polaczenie->real_escape_string($numerTelefonu);
@@ -109,8 +110,20 @@
 			$numerTelefonu = $polaczenie->real_escape_string($numerTelefonu);	
 			$rola = $polaczenie->real_escape_string($rola);	
 		
-			$sql = "UPDATE Uzytkownicy SET Imie='$imie', Nazwisko='$nazwisko', Login='$login', NumerTelefonu=$numerTelefonu, Rola='$rola' WHERE ID=$id;";
-			$polaczenie->query($sql);
+			$sql = "SELECT * FROM Uzytkownicy WHERE (Login = '$login' OR NumerTelefonu = '$numerTelefonu') AND ID != $id";
+			$wynik = $polaczenie->query($sql);
+		
+			if ($wynik->num_rows > 0) {
+				echo '<p style="color: red;">Taki login lub numer telefonu już istnieje w bazie danych.</p>';
+			} else {
+				$sql = "UPDATE Uzytkownicy SET Imie='$imie', Nazwisko='$nazwisko', Login='$login', NumerTelefonu='$numerTelefonu', Rola='$rola' WHERE ID=$id;";
+				if ($polaczenie->query($sql) === TRUE) {
+					echo '<p style="color: green;">Dane użytkownika zostały zaktualizowane.</p>';
+				} else {
+					echo '<p style="color: red;">Wystąpił błąd podczas edytowania użytkownika: ' . $polaczenie->error . '</p>';
+				}
+			}
+		
 			$polaczenie->close();
 		}
 	}
