@@ -1,25 +1,16 @@
-/* Ustawienia dla pełnej wysokości strony */
-html, body {
-    height: 100%; /* Pełna wysokość dla całej strony */
-    margin: 0;
-    padding: 0;
-}
-
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Sprawia, że body rozciąga się na całą wysokość strony */
 }
 
-/* Zawartość strony */
 .container {
     flex: 1; /* Zawartość zajmie całą dostępną przestrzeń */
     padding-top: 70px; /* Dopasowanie marginesu do wysokości navbaru */
 }
 
-/* Dodaj margines dla elementów bootstrapowych */
 .container, .row {
-    margin-top: 70px; /* Margines dla elementów Bootstrap, aby uwzględniać navbar */
+    margin-top: 70px; /* Aby navbar nie nachodził na content */
 }
 
 /* Navbar */

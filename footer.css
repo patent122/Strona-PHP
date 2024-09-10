@@ -7,7 +7,6 @@ footer {
 }
 
 footer section {
-    padding: 20px 0; /* Większe odstępy między sekcjami */
     border-bottom: 1px solid #444; /* Ciemniejsza linia oddzielająca sekcje */
 }
 
@@ -72,4 +71,8 @@ footer a {
 
 footer a:hover {
     color: #f39c12; /* Kolor linku po najechaniu */
+}
+
+footer h6 {
+    font-size: large;
 }
